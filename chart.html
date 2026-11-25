@@ -1,0 +1,293 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The Spectrum Chart — Christian Traditions: A Theological Spectrum</title>
+<meta name="description" content="Interactive chart of thirty Christian traditions across fourteen theological axes, with the reasoning behind each placement.">
+<link rel="canonical" href="https://sonofgod.love/chart">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Son of God · A Theological Spectrum">
+<meta property="og:title" content="The Spectrum Chart — Christian Traditions: A Theological Spectrum">
+<meta property="og:description" content="Interactive chart of thirty Christian traditions across fourteen theological axes, with the reasoning behind each placement.">
+<meta property="og:url" content="https://sonofgod.love/chart">
+<meta name="author" content="S. Harrison Knudson">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>:root{--stone:#E4E8E4;--surface:#F3F5F2;--ink:#182029;--soft:#4A5A61;--faint:#7C8A8E;--rule:#BFC7BF;--verd:#2E6E60;--gold:#9A6E1F;--wash:#EFE2C4;--r0:#EFE0C0;--r25:#DDBB7A;--r50:#C98F4E;--r75:#A85F35;--r100:#7A3B22;--ramp:linear-gradient(90deg,#EFE0C0 0%,#DDBB7A 25%,#C98F4E 50%,#A85F35 75%,#7A3B22 100%)}*{box-sizing:border-box}body{margin:0;background:var(--stone);color:var(--ink);font:400 15px/1.5 Georgia,'Times New Roman',serif;-webkit-font-smoothing:antialiased}.wrap{max-width:1560px;margin:0 auto;padding:0 20px 90px}header{padding:40px 0 16px;border-bottom:2px solid var(--ink)}h1{font-size:clamp(26px,4.2vw,48px);line-height:1.03;margin:0 0 8px;letter-spacing:-.02em;font-weight:400}.sub{font:500 11px/1.5 ui-monospace,Menlo,monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--verd);margin:0}.lede{max-width:66ch;color:var(--soft);margin:14px 0 0}.bar{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;padding:14px 0;border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--stone);z-index:8}.ctl{display:flex;align-items:center;gap:7px;font:500 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}select,input[type=search]{font:400 13px/1 Georgia,serif;background:var(--surface);border:1px solid var(--rule);border-radius:2px;padding:7px 9px;color:var(--ink)}input[type=search]{width:190px}button.act{font:500 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.1em;text-transform:uppercase;background:transparent;border:1px solid var(--ink);border-radius:2px;padding:8px 12px;color:var(--ink);cursor:pointer}button.act:hover{background:var(--ink);color:var(--stone)}.ctl input[type=checkbox]{accent-color:var(--gold);width:15px;height:15px}.keys{display:flex;gap:14px;flex-wrap:wrap;margin-left:auto}.scalekey{display:flex;align-items:center;gap:8px;font:500 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.06em;color:var(--soft)}.scalekey .strip{width:190px;height:13px;background:var(--ramp);border:1px solid rgba(24,32,41,.18)}.scalekey .cap{text-transform:uppercase;color:var(--faint);letter-spacing:.09em}.count{font:500 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);padding:14px 0 0}.scroll{overflow-x:auto;margin-top:8px}table{border-collapse:collapse;min-width:1220px;width:100%}thead th{vertical-align:bottom;padding:0 5px 8px 0;text-align:left}th.tcol{width:250px;min-width:210px}.ax{background:none;border:0;padding:0;text-align:left;cursor:pointer;width:100%;font:inherit;color:inherit}.ax b{display:block;font:700 11.5px/1.25 Georgia,serif;margin-bottom:5px}.ax:hover b{color:var(--verd);text-decoration:underline}.ax.on b{color:var(--verd)}.poles{display:flex;justify-content:space-between;gap:5px;font:400 8.4px/1.2 ui-monospace,Menlo,monospace;color:var(--faint);text-transform:uppercase;border-top:1px solid var(--rule);padding-top:4px}.ax.on .poles{border-top:2px solid var(--verd)}tr.fam td{padding:20px 0 4px;font:700 11px/1 ui-monospace,Menlo,monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--verd);border-bottom:1px solid var(--verd)}tr.r td{padding:3px 0;border-bottom:1px solid rgba(191,199,191,.45)}td.nm{font-size:13.5px;color:var(--soft);padding-right:14px;text-align:right;white-space:nowrap}td.nm .tot{font:400 9.5px/1 ui-monospace,Menlo,monospace;color:var(--faint);display:block;margin-top:3px}tr.r.hi td{background:var(--wash)}tr.r.hi td.nm{color:var(--gold);font-weight:700}tr.r.dim td{opacity:.25}.cw{padding:0 4px}.cell{position:relative;height:25px;background:var(--surface);cursor:pointer;border:0;width:100%;display:block;padding:0}.fill{position:absolute;left:0;top:0;bottom:0;transition:width .18s ease}.v{position:absolute;top:50%;transform:translateY(-50%);font:700 10px/1 ui-monospace,Menlo,monospace}.cell:hover{outline:2px solid var(--ink);outline-offset:1px;z-index:2}.cell:focus-visible{outline:2px solid var(--verd);outline-offset:2px}td.focus .cell{height:29px}td.focus{background:rgba(46,110,96,.07)}#panel{position:fixed;left:0;right:0;bottom:0;background:var(--ink);color:#EDEFEC;padding:18px 22px 20px;box-shadow:0 -6px 26px rgba(0,0,0,.25);display:none;z-index:30}#panel.on{display:block}#panel .sc{font:700 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.12em;text-transform:uppercase;color:#8FB6AB;margin:0 0 6px}#panel h3{margin:0 0 6px;font:400 16px/1.3 Georgia,serif}#panel h3 b{color:#F0D9A8}#panel p.n{margin:0;max-width:90ch;font-size:14px;color:#C4CCC9}#panel .mini{display:flex;gap:3px;margin-top:12px}#panel .mini i{height:7px;flex:1;opacity:.85}#panel button{position:absolute;top:14px;right:18px;background:transparent;border:1px solid #55645F;color:#C4CCC9;border-radius:2px;padding:5px 11px;cursor:pointer;font:400 12px/1 Georgia,serif}footer{margin-top:46px;padding-top:22px;border-top:1px solid var(--rule);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px}footer h4{margin:0 0 7px;font:700 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}footer p{margin:0;font-size:13.5px;color:var(--faint)}.nores{padding:40px 0;color:var(--faint);font-style:italic}.corrections{margin-top:40px;padding:28px 30px;background:var(--surface);border-left:3px solid var(--verd)}.corrections h3{margin:0 0 10px;font:400 21px/1.25 Georgia,serif;color:var(--ink)}.corrections p{margin:0 0 12px;max-width:74ch;color:var(--soft);font-size:14.5px}.corrections ol{margin:0 0 16px;padding-left:20px;max-width:74ch;color:var(--soft);font-size:14.5px}.corrections li{margin-bottom:4px}.corrections li b{color:var(--ink)}a.mail{display:inline-block;background:var(--verd);color:#F1F4F1;text-decoration:none;padding:11px 20px;border-radius:2px;font:500 11px/1 ui-monospace,Menlo,monospace;letter-spacing:.13em;text-transform:uppercase}a.mail:hover{background:var(--ink)}.corrections .cite{margin:16px 0 0;font:400 12px/1.5 ui-monospace,Menlo,monospace;color:var(--faint);max-width:74ch}.sitenav{display:flex;flex-wrap:wrap;gap:4px 22px;align-items:center;padding:16px 0;border-bottom:1px solid var(--rule)}.sitenav a{font:500 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);text-decoration:none;padding:6px 0}.sitenav a:hover{color:var(--verd)}.sitenav a.here{color:var(--ink);border-bottom:2px solid var(--gold)}.sitenav .mark{font:400 13px/1 Georgia,serif;letter-spacing:.02em;color:var(--ink);margin-right:auto;text-transform:none}.crosslink{margin:44px 0 0;padding:22px 26px;background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--gold)}.crosslink p{margin:0 0 12px;color:var(--soft);font-size:15px;max-width:60ch}.crosslink h4{margin:0 0 7px;font:400 21px/1.2 Georgia,serif;color:var(--ink)}.crosslink a{display:inline-block;background:var(--verd);color:#F1F4F1;text-decoration:none;padding:12px 20px;border-radius:2px;font:500 11px/1 ui-monospace,Menlo,monospace;letter-spacing:.13em;text-transform:uppercase}.crosslink a:hover{background:var(--ink)}.specnote{margin:14px 0 0;font-size:14.5px;color:var(--soft);max-width:82ch}.specnote b{color:var(--ink)}.candour{margin:46px 0 0;padding:26px 28px;background:var(--surface);border:1px solid var(--rule);border-left:3px solid #8C3B26}.candour h3{margin:0 0 10px;font:400 24px/1.2 Georgia,serif;color:var(--ink)}.candour p{margin:0 0 14px;color:var(--soft);font-size:14.5px;max-width:78ch}.candour ul{margin:0 0 16px;padding-left:20px;max-width:78ch}.candour li{margin-bottom:9px;color:var(--soft);font-size:14.5px;line-height:1.5}.candour li b{color:var(--ink)}.candour .ask{border-top:1px solid var(--rule);padding-top:14px}.axn{display:inline-block;font:500 9px/1 ui-monospace,Menlo,monospace;letter-spacing:.08em;color:var(--verd);margin-right:5px;vertical-align:1px}.cell.na{background:repeating-linear-gradient(135deg,var(--surface) 0 5px,#E2E6E1 5px 10px)}.cell.na .v{left:6px;color:var(--faint);font-weight:400}th.prov .ax b{font-style:italic}.pv{display:inline-block;font:500 8px/1 ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;color:#8C3B26;border:1px solid #C9A08F;padding:2px 4px;margin-left:4px;vertical-align:1px}td.atc{padding:0 4px;min-width:150px}.atk{display:block;width:100%;text-align:left;border:1px solid var(--rule);background:var(--surface);cursor:pointer;font:400 11.5px/1.25 Georgia,serif;color:var(--ink);padding:4px 7px;min-height:25px}.atk:hover{outline:2px solid var(--ink);outline-offset:1px}details.pick{position:relative}details.pick summary{cursor:pointer;list-style:none;font:500 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);border:1px solid var(--rule);background:var(--surface);padding:8px 10px;border-radius:2px}details.pick summary::-webkit-details-marker{display:none}details.pick .box{position:absolute;top:34px;left:0;z-index:20;background:var(--surface);border:1px solid var(--ink);padding:12px 14px;width:330px;box-shadow:0 8px 24px rgba(0,0,0,.15)}details.pick label{display:flex;gap:7px;align-items:center;font:400 13px/1.35 Georgia,serif;color:var(--ink);text-transform:none;letter-spacing:0;margin:3px 0}details.pick .row{display:flex;gap:6px;margin-top:9px;flex-wrap:wrap}details.pick .row button{font:500 9.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;background:transparent;border:1px solid var(--rule);padding:6px 8px;cursor:pointer}details.pick .gh{font:700 9.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--verd);margin:9px 0 3px}.seg{display:inline-flex;border:1px solid var(--ink);border-radius:2px;overflow:hidden}.seg button{font:500 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;background:transparent;border:0;padding:8px 10px;cursor:pointer;color:var(--ink)}.seg button.on{background:var(--ink);color:var(--stone)}#corr{display:none;margin-top:34px;padding:22px 24px;background:var(--surface);border:1px solid var(--rule)}#corr.on{display:block}#corr h3{margin:0 0 8px;font:400 21px/1.2 Georgia,serif}#corr p{margin:0 0 12px;color:var(--soft);font-size:14px;max-width:82ch}#corr table{min-width:0;width:auto;border-collapse:collapse}#corr td,#corr th{font:400 10px/1 ui-monospace,Menlo,monospace;padding:0;text-align:center}#corr th.rl{text-align:right;padding-right:8px;white-space:nowrap;font-size:10.5px}#corr th.cl{height:190px;vertical-align:bottom;width:30px}#corr th.cl span{display:inline-block;transform:rotate(-60deg);transform-origin:left bottom;white-space:nowrap;width:24px;margin-left:16px}#corr td i{display:block;width:30px;height:24px;line-height:24px;font-style:normal}.v7{border-left:2px solid var(--verd);padding-left:9px;margin-top:5px;display:block;color:var(--ink)}</style></head><body><div class="wrap"><nav class="sitenav"><span class="mark">A Theological Spectrum</span><a href="/" data-to="home">Home</a><a href="/glossary" data-to="glossary">Glossary</a><a href="/chart" data-to="chart" class="here">View the chart</a><a href="/survey" data-to="survey">Take the survey</a><a href="/library" data-to="library">Library</a></nav><header><p class="sub">30 traditions &middot; 14 axes + 3 provisional &middot; scored 0&ndash;100 &middot; version 7 &middot; november 2026 &middot; working draft</p><h1>Christian Traditions: A Theological Spectrum</h1><p class="lede">A family tree shows where denominations came from. This shows where they stand. Click any axis heading to rank every tradition along it; click any bar to read the reasoning behind that placement. You choose which axes count toward the totals, and you can read the chart as an order rather than as numbers.</p></header><div class="bar"><span class="ctl">Find <input type="search" id="q" placeholder="tradition&hellip;" autocomplete="off"></span><span class="ctl">Family
+<select id="fam"><option value="">All</option></select></span><span class="ctl">View
+<select id="spec"><option value="all">All seventeen axes</option><optgroup label="Conceptual grouping"><option value="auth">I &mdash; Authority and Revelation</option><option value="god">II &mdash; God, Salvation and Last Things</option><option value="prac">III &mdash; Worship and Practice</option><option value="alone">S &mdash; Sabbath, on its own</option></optgroup><optgroup label="Grouping found in the data"><option value="clA">Cluster A (computed)</option><option value="clB">Cluster B (computed)</option></optgroup><optgroup label="New in version 7"><option value="prov">P &mdash; Provisional axes</option></optgroup></select></span><span class="ctl">Sort
+<select id="sort"><option value="fam">By family</option><option value="total-desc">Total, high to low</option><option value="total-asc">Total, low to high</option><option value="name">Name, A&ndash;Z</option></select></span><span class="ctl">Highlight
+<select id="hl"><option value="">None</option></select></span><details class="pick" id="pick"><summary id="picksum">Totals count 14 axes</summary><div class="box" id="pickbox"></div></details><span class="ctl">Read as
+<span class="seg"><button id="mScore" class="on">Scores</button><button id="mRank">Order only</button></span></span><span class="ctl"><input type="checkbox" id="atone"> Atonement column</span><button class="act" id="corrbtn">Axis correlations</button><button class="act" id="reset">Reset</button><span class="keys"><span class="scalekey"><span class="lo">0</span><span class="strip"></span><span class="hi">100</span><span class="cap">left pole &rarr; right pole</span></span></span></div><p class="specnote" id="specnote"></p><p class="count" id="count"></p><div class="scroll"><table id="grid"></table></div><section id="corr"><h3>How the axes move together</h3><p id="corrnote"></p><div class="scroll"><table id="corrtab"></table></div></section><section class="candour"><h3>What is wrong with this chart</h3><p>Stated plainly, because a reader is better served by knowing the weaknesses than by discovering them. Each is followed by what version 7 does about it. None is fully cured.</p><ul><li><b>The three spectrums are partly imposed.</b> Correlating the axes across the traditions produces a clean split into <i>two</i> groups, not three. The three-way arrangement used here is a conceptual overlay on that result, chosen because it is easier to read and because each part has a headline a non-specialist can hold. It is a presentational decision, not a finding.
+<span class="v7"><b>Version 7:</b> both groupings are now on the page. The View menu offers the conceptual three and, separately, the two clusters the data actually produce, computed live from the scores so that any correction to a score updates them. &ldquo;Axis correlations&rdquo; shows the full table they are built from.</span></li><li><b>Sabbath observance does not belong anywhere.</b> It is the most independent axis on the chart, correlating with the other core axes at an average of only <span id="sabr">0.19</span> (absolute value, computed from the current scores).
+<span class="v7"><b>Version 7:</b> it no longer sits in Worship and Practice. It stands on its own, marked S. The computed clusters still have to put it somewhere, and they place it only loosely; with all seventeen axes counted and the data split three ways, it separates out alone.</span></li><li><b>The scores are judgments.</b> They are better read as ordinal than cardinal: that one tradition sits further along an axis than another is the claim, not the digit. Reasonable people will disagree with individual placements, and some of those disagreements will be right.
+<span class="v7"><b>Version 7:</b> &ldquo;Read as: Order only&rdquo; replaces every digit with a rank, ties shared, and the totals with a mean rank. The judgments remain judgments.</span></li><li><b>The axis set is not neutral.</b> Choosing these fourteen rather than nine or twenty shapes every result, including every total. Several obvious axes are missing, and their absence is itself a distortion.
+<span class="v7"><b>Version 7:</b> the totals are no longer fixed. &ldquo;Totals count&rdquo; lets you choose which axes are added, and the order changes as you do. Two missing axes are drafted: <i>women in ministry</i> and <i>church and state</i>. They are marked provisional and left out of the totals unless you add them. The <i>model of the atonement</i> is shown as categories, not scores, because the models are alternatives, not points on a line. Intercession of Mary and the saints is held back on purpose for the coming multifaith edition, where it fits a wider axis on intermediaries between the worshipper and God.</span></li><li><b>Several labels cover internally diverse families.</b> Quakers span programmed evangelical to liberal unprogrammed; Lutherans span the ELCA to the WELS. A single row for a family that split over a doctrine cannot represent it honestly.
+<span class="v7"><b>Version 7:</b> Quakers now have two rows, programmed and unprogrammed. Lutherans have three: the ELCA, the LCMS and the WELS. Other broad labels remain, including Presbyterian / Reformed, which covers both the PC(USA) and the PCA.</span></li><li><b>Some axes conflate two things.</b> Baptism mixed mode with necessity, so a tradition practising symbolic immersion could outrank one practising regenerative infant baptism. That was a defect in the axis, not a claim about the traditions.
+<span class="v7"><b>Version 7:</b> the axis is split. <i>Baptism: Efficacy</i> runs from symbol to necessity, and has been rescored. <i>Baptism: Candidates</i> runs from infants to believers only, and is provisional. Mode is a matter of categories, not degree, so it now appears in the survey&rsquo;s third set instead. Church and state still joins two ideas, institutional separation and withdrawal from politics, and its placement notes say so.</span></li><li><b>The author is not neutral either.</b> This was built by a Latter-day Saint attorney. The chart tries to describe rather than to argue. No tradition is highlighted by default &mdash; use the highlight selector above to pick out your own, or anyone else&rsquo;s, and read the rest against it.</li></ul><p class="ask">If any of that describes a problem you can fix &mdash; a placement, an axis, a label, a missing dimension &mdash; please write. A correction naming the tradition, the axis, the score you would assign, and a source is worth more than a general objection, but a general objection is welcome too. Scores on the three provisional axes are especially open to correction, and suggestions for axes that ought to exist are especially wanted.</p><a class="mail" href="mailto:steele@sonofgod.love?subject=Spectrum%20chart%20correction&amp;body=Tradition%3A%20%0AAxis%3A%20%0AScore%20I%20would%20assign%3A%20%0ASource%3A%20%0A%0AWhat%20the%20current%20placement%20gets%20wrong%3A%20%0A">Send a correction or a suggestion</a></section><div class="crosslink"><h4>Where do you sit?</h4><p>Answer fourteen statements, one for each core axis, and see which traditions you align with &mdash; belief by belief, and overall. About three minutes. Nothing is stored or sent.</p><a href="/survey" data-to="survey">Take the survey</a></div><footer><div><h4>On the scores</h4><p>Positions reflect official doctrine and scholarly consensus, not judgments of value, truth or authenticity. They are better read as ordinal than cardinal: the ordering is the claim, not the digit. Reasonable disagreement is expected. Where an axis does not apply &mdash; candidates for baptism in a tradition that has no water baptism &mdash; the cell reads n/a and is left out of totals rather than scored.</p></div><div><h4>On the totals</h4><p>A total is the sum of the axis scores you have chosen to count, shown against the most that tradition could score on them. By default it counts the fourteen core axes. Because the choice of axes determines every total, the totals are illustrative and the individual axes are the real content. On the core axes a total measures distance from the historic Nicene-and-Reformation cluster &mdash; distance, not error.</p></div><div><h4>On the labels</h4><p>Several labels still cover internally diverse families. Scores target the representative center unless a more specific label is listed. Inspired by Dr. Matt Baker&rsquo;s Christian Denominations Family Tree.</p></div></footer><section class="corrections"><h3>This is a draft. Corrections are wanted.</h3><p>Some of these placements are wrong. I would rather know which. The most useful correction names four things &mdash; anything at that level of specificity can be acted on directly, where a general objection cannot:</p><ol><li><b>The tradition</b> &mdash; which of the 30</li><li><b>The axis</b> &mdash; which of the 17</li><li><b>The score you would assign instead</b> &mdash; a number between 0 and 100</li><li><b>A source</b> &mdash; a confession, catechism, official statement or standard reference work</li></ol><p><a class="mail" href="mailto:steele@sonofgod.love?subject=Spectrum%20chart%20correction&amp;body=Tradition%3A%20%0AAxis%3A%20%0AScore%20I%20would%20assign%3A%20%0ASource%3A%20%0A%0AWhat%20the%20current%20placement%20gets%20wrong%3A%20%0A">Send a correction</a></p><p class="cite">Christian Traditions: A Theological Spectrum. Version 7, November 2026. S.&nbsp;Harrison Knudson, J.D. Retrieved from sonofgod.love. &mdash; Cite the version; earlier versions are superseded. Version 7 changes: baptism split and rescored; Quaker and Lutheran rows split; three provisional axes; Sabbath standalone; computed clusters; order-only reading; reader-chosen totals.</p></section></div><div id="panel"><button id="pclose">Close</button><p class="sc" id="psc"></p><h3 id="pt"></h3><p class="n" id="pn"></p><div class="mini" id="pm"></div></div>
+<script>
+
+const LINKS = {
+home:     "/",
+glossary: "/glossary",
+chart:    "/chart",
+survey:   "/survey",
+  library:  "/library"
+};
+
+function wireLinks(){
+document.querySelectorAll('[data-to]').forEach(a=>{
+const k=a.getAttribute('data-to');
+if(LINKS[k]) a.setAttribute('href', LINKS[k]);
+});
+}
+const AX=[
+["Primitivism / Restorationism","Institutional Tradition","Full Apostolic Restoration","restorationism"],
+["Evangelism & Missions","Liturgical / Inward","Missionary-Compulsory","missions"],
+["Relationship to Nicene Orthodoxy","Fully Nicene","Non-Nicene / Unitarian","nicaea"],
+["Charismatic / Gifts of the Spirit","Cessationist","Full Pentecostal","charismatic"],
+["Baptism: Efficacy","None / Symbolic","Necessary + Proxy","baptism"],
+["Scriptural Authority / Open Canon","Closed Canon","Open Canon","scripture"],
+["Ecclesial Exclusivity","All Believers Valid","One True Church","exclusivity"],
+["Afterlife / Salvation Scope","Heaven / Hell Binary","Universal / Tiered","salvation"],
+["Priesthood / Lay Ministry","Ordained Clergy Only","Universal Lay","priesthood"],
+["Sabbath Observance","No Sabbath","Strict Saturday","sabbath"],
+["Soteriology","Monergism / Election","Synergism","soteriology"],
+["Eschatology","Amillennial","Dispensational","eschatology"],
+["Sacramental Realism","High / Real Presence","Memorialist","sacramental"],
+["Church Authority Structure","Centralized","Independent","authority"],
+["Baptism: Candidates","Infants Baptized","Believers Only","candidates",1],
+["Women in Ministry","Offices Reserved to Men","All Offices Open","women",1],
+["Church and State","Established Church","Separation / Withdrawal","state",1]];
+const CORE=[0,1,2,3,4,5,6,7,8,9,10,11,12,13];
+const GROUPS=[
+{id:"auth", r:"I",  n:"Authority and Revelation", sub:"Where authority comes from, and who holds it.", ax:[13,8,5,6,0]},
+{id:"god",  r:"II", n:"God, Salvation and Last Things", sub:"What is believed about God, and what becomes of us.", ax:[10,11,7,2]},
+{id:"prac", r:"III",n:"Worship and Practice", sub:"What a member actually does.", ax:[3,12,1,4]},
+{id:"alone",r:"S",  n:"Sabbath, on its own", sub:"The most independent axis on the chart. It is shown by itself rather than placed in a group it does not fit.", ax:[9]},
+{id:"prov", r:"P",  n:"Provisional axes, new in version 7", sub:"Drafted to answer the most obvious gaps. Scores are first placements, open to correction, and are left out of the totals unless you add them.", ax:[14,15,16]}
+];
+const RAW=[["Historically Creedal & Liturgical",[["Roman Catholic",[4,28,1,12,88,62,90,54,3,22,52,8,2,2,5,2,25]],["Eastern Orthodox",[7,10,1,15,88,55,82,44,5,20,55,6,3,15,5,3,10]],["Oriental Orthodox (Coptic/Armenian)",[8,11,3,50,88,56,80,44,6,22,55,8,4,16,5,4,20]],["Eastern Catholic (Maronite/Greek)",[6,14,2,13,88,60,58,47,7,22,52,8,4,10,5,2,25]],["Anglican / Episcopal",[18,27,2,20,62,42,37,32,18,22,40,18,25,22,5,95,15]],["Anglican Realignment (ACNA)",[22,48,2,30,62,30,30,30,20,20,42,22,28,24,5,45,45]]]],["Reformation & Post-Reformation",[["Lutheran (ELCA / mainline)",[23,35,2,8,78,20,15,10,30,15,25,12,18,40,5,100,45]],["Lutheran (LCMS)",[20,40,1,6,82,14,35,10,28,16,24,12,16,45,5,3,60]],["Lutheran (WELS)",[20,38,1,4,82,10,45,8,28,15,22,10,15,48,5,2,65]],["Presbyterian / Reformed / Calvinist",[28,42,2,3,40,5,26,3,42,18,3,20,38,35,5,55,40]],["Methodist / Wesleyan",[33,50,3,18,45,28,12,20,38,15,60,28,42,30,10,95,55]],["Nazarene / Holiness",[40,70,4,40,30,22,14,24,40,14,62,32,60,38,50,95,60]]]],["Baptist & Stone-Campbell",[["Southern / Evangelical Baptist",[46,78,3,22,12,8,30,5,52,15,45,72,88,82,100,8,85]],["Primitive Baptist",[68,38,4,5,10,3,45,5,55,35,5,15,85,88,100,2,85]],["Churches of Christ / Stone-Campbell",[72,60,6,28,90,12,52,22,58,32,66,40,70,90,100,10,70]]]],["Pentecostal & Charismatic",[["Pentecostal / Assemblies of God",[52,82,4,97,12,20,18,12,55,10,62,80,85,55,98,80,65]],["Charismatic / Neo-Charismatic",[55,80,4,88,12,22,14,12,50,10,62,75,85,78,95,70,60]],["Apostolic Pentecostal (UPCI)",[60,88,90,96,92,18,60,12,55,12,64,80,85,50,100,60,70]]]],["Radical Reformation & Peace Churches",[["Quaker (programmed / evangelical)",[40,55,5,35,0,18,10,20,70,8,66,40,95,65,null,90,75]],["Quaker (unprogrammed / liberal)",[36,8,45,40,0,60,3,70,99,2,75,5,99,88,null,100,75]],["Mennonite / Amish / Anabaptist",[48,30,5,25,15,18,12,18,60,28,64,35,82,70,100,55,97]],["Salvation Army",[36,72,5,38,0,15,15,15,45,8,62,35,98,8,null,100,55]]]],["Evangelical & Independent",[["Non-denominational Evangelical",[44,74,4,62,12,10,8,10,55,10,48,78,90,92,95,35,70]],["Plymouth Brethren",[65,62,4,20,10,12,22,12,65,35,22,88,80,90,80,2,92]]]],["Restorationist & Adventist",[["Latter-day Saints",[99,99,78,52,99,99,98,99,95,48,78,82,50,5,100,15,70]],["Seventh-day Adventist",[66,70,10,30,30,18,32,30,45,99,62,95,75,20,100,35,92]],["Jehovah's Witnesses",[83,88,92,5,35,35,88,40,65,50,70,96,80,4,100,5,99]],["Messianic Judaism",[68,22,14,55,25,22,30,27,58,62,60,70,55,55,85,30,60]],["Christian Science",[58,45,80,35,2,70,42,65,60,38,80,20,95,60,null,95,65]],["Unitarian Universalist",[30,10,99,10,2,45,2,72,70,5,95,5,92,88,null,100,88]]]]];
+const ATONE={"Roman Catholic":["S","Satisfaction (Anselm, Aquinas); sacrifice; several models held together"],"Eastern Orthodox":["V","Victory over death and the devil; healing of nature toward theosis"],"Oriental Orthodox (Coptic/Armenian)":["V","Victory over death; restoration of the image of God"],"Eastern Catholic (Maronite/Greek)":["V","Eastern emphasis on victory and theosis, within Catholic teaching"],"Anglican / Episcopal":["P","Plural; substitution in the Articles, wide variety in practice"],"Anglican Realignment (ACNA)":["PS","Penal substitution, with sacrifice and victory"],"Lutheran (ELCA / mainline)":["P","Plural; Christus Victor prominent (Aulén)"],"Lutheran (LCMS)":["PS","Vicarious satisfaction, active and passive obedience"],"Lutheran (WELS)":["PS","Vicarious satisfaction; objective justification"],"Presbyterian / Reformed / Calvinist":["PS","Penal substitution; particular redemption in confessional bodies"],"Methodist / Wesleyan":["P","Plural; substitution with universal scope, some governmental"],"Nazarene / Holiness":["P","Substitutionary, universal in scope; governmental strand"],"Southern / Evangelical Baptist":["PS","Penal substitution (Baptist Faith and Message 2000)"],"Primitive Baptist":["PS","Penal substitution, limited to the elect"],"Churches of Christ / Stone-Campbell":["PS","Substitution, commonly penal; no binding creed"],"Pentecostal / Assemblies of God":["PS","Penal substitution, with healing in the atonement"],"Charismatic / Neo-Charismatic":["PS","Penal substitution, often with healing in the atonement"],"Apostolic Pentecostal (UPCI)":["PS","Substitution by the one God manifest in flesh"],"Quaker (programmed / evangelical)":["PS","Substitution, in evangelical Friends' statements of faith"],"Quaker (unprogrammed / liberal)":["M","Undefined; inward transformation by the Light"],"Mennonite / Amish / Anabaptist":["V","Nonviolent and Christus Victor readings prominent; substitution also held"],"Salvation Army":["PS","Substitution, universal in scope"],"Non-denominational Evangelical":["PS","Penal substitution"],"Plymouth Brethren":["PS","Penal substitution"],"Latter-day Saints":["S","Satisfies justice so mercy can claim the penitent (Alma 34, 42); suffering in Gethsemane and on the cross"],"Seventh-day Adventist":["PS","Substitution, with Christ's ministry in the heavenly sanctuary"],"Jehovah's Witnesses":["V","Ransom: a corresponding ransom for what Adam lost"],"Messianic Judaism":["PS","Substitution read through Yom Kippur and Passover"],"Christian Science":["M","At-one-ment: exemplary demonstration of humanity's unity with God"],"Unitarian Universalist":["M","Traditional atonement generally rejected; Jesus as moral example"]};
+const ATCAT={PS:"Penal substitution",S:"Satisfaction",V:"Victory / ransom",M:"Moral influence / example",P:"Plural"};
+const T=[];RAW.forEach(f=>f[1].forEach(t=>T.push({name:t[0],s:t[1],fam:f[0]})));
+const NZ="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";
+let N={};
+(async()=>{try{const b=Uint8Array.from(atob(NZ),c=>c.charCodeAt(0));N=JSON.parse(await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream('gzip'))).text());}catch(e){}})();
+const AXNOTE={
+candidates:"Provisional (v7). Split from the old baptism axis. This axis asks only who is baptized; how it is done is a matter of categories and now sits in the survey’s third set.",
+women:"Provisional (v7). Measures official position on ordination and governing office, not practice. Practice and position diverge within several labels.",
+state:"Provisional (v7). This axis still joins two ideas: institutional separation of church and state, and withdrawal from political life. The far pole is withdrawal. It is an admitted defect.",
+baptism:"Rescored in v7. This axis now measures efficacy only: whether baptism is a symbol or necessary for salvation. Who is baptized has its own axis."
+};
+const $=id=>document.getElementById(id);
+const STOPS=[[0,239,224,192],[25,221,187,122],[50,201,143,78],[75,168,95,53],[100,122,59,34]];
+function ramp(v){
+v=Math.max(0,Math.min(100,v));
+for(let i=1;i<STOPS.length;i++){
+if(v<=STOPS[i][0]){
+const a=STOPS[i-1],b=STOPS[i],t=(v-a[0])/(b[0]-a[0]);
+return [1,2,3].map(k=>Math.round(a[k]+(b[k]-a[k])*t));
+}
+}
+return STOPS[STOPS.length-1].slice(1);
+}
+const band=v=>'rgb('+ramp(v).join(',')+')';
+const inkOn=v=>{const c=ramp(v);return (0.299*c[0]+0.587*c[1]+0.114*c[2])>158?'#3A2C1C':'#FBF3E6';};
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+let focus=null, mode='score';
+const COUNT=new Set(CORE);   // axes that count toward totals
+
+const RANK=AX.map((_,i)=>{
+const vals=T.map(t=>t.s[i]).filter(v=>v!==null);
+return T.map(t=>t.s[i]===null?null:1+vals.filter(v=>v<t.s[i]).length);
+});
+const RN=AX.map((_,i)=>T.filter(t=>t.s[i]!==null).length);
+const rankPos=(ti,i)=>RANK[i][ti]===null?null:(RN[i]>1?(RANK[i][ti]-1)/(RN[i]-1)*100:50);
+
+function corr(i,j){
+const p=T.filter(t=>t.s[i]!==null&&t.s[j]!==null);
+const n=p.length; if(n<3) return 0;
+const mi=p.reduce((s,t)=>s+t.s[i],0)/n, mj=p.reduce((s,t)=>s+t.s[j],0)/n;
+let sij=0,sii=0,sjj=0;
+p.forEach(t=>{const a=t.s[i]-mi,b=t.s[j]-mj;sij+=a*b;sii+=a*a;sjj+=b*b;});
+return (sii&&sjj)? sij/Math.sqrt(sii*sjj) : 0;
+}
+function cluster(ids,k){
+let cl=ids.map(i=>[i]);
+const d=(A,B)=>{let s=0;A.forEach(a=>B.forEach(b=>s+=1-Math.abs(corr(a,b))));return s/(A.length*B.length);};
+while(cl.length>k){
+let best=[0,1],bd=Infinity;
+for(let a=0;a<cl.length;a++)for(let b=a+1;b<cl.length;b++){const x=d(cl[a],cl[b]);if(x<bd){bd=x;best=[a,b];}}
+cl[best[0]]=cl[best[0]].concat(cl[best[1]]);cl.splice(best[1],1);
+}
+return cl.sort((a,b)=>b.length-a.length||a[0]-b[0]);
+}
+const meanAbs=(i,ids)=>{const o=ids.filter(j=>j!==i);return o.reduce((s,j)=>s+Math.abs(corr(i,j)),0)/o.length;};
+let CL2=[],CL3=[];
+function recluster(){
+const ids=[...COUNT].sort((a,b)=>a-b);
+if(ids.length<3){CL2=[ids,[]];CL3=[ids,[],[]];return;}
+CL2=cluster(ids,2); CL3=cluster(ids,3);
+}
+
+const AXLBL={};
+GROUPS.forEach(g=>g.ax.forEach((a,j)=>{AXLBL[a]= g.ax.length>1 ? g.r+"."+(j+1) : g.r;}));
+const axLabel=i=>AXLBL[i]||String(i+1);
+const ORDER=GROUPS.flatMap(g=>g.ax);   // column order for the full view
+function visAx(){
+const g=$('spec').value;
+if(g==='all') return ORDER;
+if(g==='clA') return ORDER.filter(i=>CL2[0].includes(i));
+if(g==='clB') return ORDER.filter(i=>(CL2[1]||[]).includes(i));
+return GROUPS.find(x=>x.id===g).ax;
+}
+
+function tally(t,ti,idx){
+const use=idx.filter(i=>COUNT.has(i)&&t.s[i]!==null);
+if(mode==='rank'){
+if(!use.length) return {txt:'—',key:0};
+const m=use.reduce((s,i)=>s+RANK[i][ti],0)/use.length;
+return {txt:'mean rank '+m.toFixed(1)+' · '+use.length+' axes',key:m};
+}
+const sum=use.reduce((s,i)=>s+t.s[i],0), max=use.length*100;
+return {txt: use.length? sum+' / '+max : 'no counted axes in view', key: max? sum/max : 0};
+}
+function rows(){
+const q=$('q').value.trim().toLowerCase(), fam=$('fam').value, sort=$('sort').value, vi=visAx();
+let list=T.map((t,ti)=>({t,ti})).filter(o=>(!fam||o.t.fam===fam)&&(!q||o.t.name.toLowerCase().includes(q)));
+if(focus!==null) list.sort((a,b)=>(b.t.s[focus]??-1)-(a.t.s[focus]??-1));
+else if(sort==='total-desc') list.sort((a,b)=>tally(b.t,b.ti,vi).key-tally(a.t,a.ti,vi).key);
+else if(sort==='total-asc') list.sort((a,b)=>tally(a.t,a.ti,vi).key-tally(b.t,b.ti,vi).key);
+else if(sort==='name') list.sort((a,b)=>a.t.name.localeCompare(b.t.name));
+return list;
+}
+function specNote(idx){
+const g=$('spec').value, cnt=[...COUNT].length;
+if(g==='clA'||g==='clB'){
+const lone=CL3.find(c=>c.length===1);
+return '<b>'+(g==='clA'?'Cluster A':'Cluster B')+'</b> &mdash; computed, not chosen. The '+cnt+' axes that count toward the totals are grouped by how closely their scores move together across the thirty traditions (average linkage on 1 &minus; |r|). This is the split the data produce; the three spectrums are a reading laid over it.'
++(lone?' Split three ways instead, <b>'+esc(AX[lone[0]][0])+'</b> separates out on its own.':'')
++' Add or remove axes under &ldquo;Totals count&rdquo; and the clusters are recomputed.';
+}
+const gg=(g==='all'?null:GROUPS.find(x=>x.id===g));
+if(gg) return '<b>'+gg.r+' &mdash; '+gg.n+'</b> &mdash; '+gg.sub+' Showing '+idx.length+' of seventeen axes. This grouping is conceptual: chosen for readability, not found in the data.';
+return 'All seventeen axes, grouped by the conceptual spectrums, with Sabbath on its own and the three provisional axes last. It reads more easily one view at a time — use the selector above.';
+}
+function render(){
+const list=rows(), grouped=(focus===null&&$('sort').value==='fam');
+const idx=visAx(), showAt=$('atone').checked, span=idx.length+1+(showAt?1:0);
+$('specnote').innerHTML=specNote(idx);
+let h='<thead><tr><th class="tcol"></th>';
+idx.forEach(i=>{const a=AX[i];
+h+='<th class="'+(a[4]?'prov':'')+'"><button class="ax'+(focus===i?' on':'')+'" data-ax="'+i+'">'
++'<b><span class="axn">'+axLabel(i)+'</span>'+esc(a[0])+(a[4]?'<span class="pv">provisional</span>':'')+(COUNT.has(i)?'':' <span class="axn" title="Not counted in totals">&#8856;</span>')+'</b><span class="poles"><span>'+esc(a[1])+'</span><span>'+esc(a[2])+'</span></span></button></th>';});
+if(showAt) h+='<th><span class="ax"><b><span class="axn">C</span>Model of the Atonement<span class="pv">categories</span></b><span class="poles"><span>not a spectrum</span><span></span></span></span></th>';
+h+='</tr></thead><tbody>';
+if(!list.length){h+='<tr><td colspan="'+span+'" class="nores">No tradition matches that search.</td></tr>';}
+let cur=null;
+list.forEach(({t,ti})=>{
+if(grouped&&t.fam!==cur){cur=t.fam;h+='<tr class="fam"><td colspan="'+span+'">'+esc(cur)+'</td></tr>';}
+h+='<tr class="r'+(t.name===$('hl').value?' hi':'')+'"><td class="nm">'+esc(t.name)
++'<span class="tot">'+tally(t,ti,idx).txt+'</span></td>';
+idx.forEach(i=>{const v=t.s[i];
+if(v===null){
+h+='<td class="'+(focus===i?'focus':'')+'"><div class="cw"><button class="cell na" data-t="'+esc(t.name)+'" data-a="'+i+'"><span class="v">n/a</span></button></div></td>';
+return;}
+const w = mode==='rank'? rankPos(ti,i) : v;
+const lab = mode==='rank'? RANK[i][ti]+(T.filter(x=>x.s[i]===v).length>1?'=':'') : v;
+const inside=w>=22;
+h+='<td class="'+(focus===i?'focus':'')+'"><div class="cw"><button class="cell" data-t="'+esc(t.name)+'" data-a="'+i+'">'
++'<span class="fill" style="width:'+w+'%;background:'+band(w)+'"></span>'
++'<span class="v" style="'+(inside?'left:calc('+w+'% - 5px);transform:translate(-100%,-50%);color:'+inkOn(w):'left:calc('+w+'% + 5px);color:var(--soft)')+'">'+lab+'</span>'
++'</button></div></td>';
+});
+if(showAt){const at=ATONE[t.name];
+h+='<td class="atc"><button class="atk" data-at="'+esc(t.name)+'">'+(at?esc(ATCAT[at[0]]):'—')+'</button></td>';}
+h+='</tr>';
+});
+$('grid').innerHTML=h+'</tbody>';
+$('count').textContent = list.length+' of '+T.length+' traditions'
++ (mode==='rank'?'  ·  order only: 1 = nearest the left pole, = marks a tie':'')
++ (focus!==null? '  ·  ranked by '+axLabel(focus)+' '+AX[focus][0] : '');
+$('picksum').textContent='Totals count '+COUNT.size+' axes';
+if($('corr').classList.contains('on')) renderCorr();
+}
+
+function buildPicker(){
+let h='';
+GROUPS.forEach(g=>{
+h+='<p class="gh">'+g.r+' &mdash; '+esc(g.n)+'</p>';
+g.ax.forEach(i=>{h+='<label><input type="checkbox" data-c="'+i+'"'+(COUNT.has(i)?' checked':'')+'> '+esc(AX[i][0])+'</label>';});
+});
+h+='<div class="row"><button data-p="core">Core fourteen</button><button data-p="all">All seventeen</button><button data-p="none">None</button></div>';
+$('pickbox').innerHTML=h;
+}
+$('pickbox').addEventListener('change',e=>{
+const i=e.target.dataset.c; if(i===undefined)return;
+e.target.checked?COUNT.add(+i):COUNT.delete(+i); recluster(); render();
+});
+$('pickbox').addEventListener('click',e=>{
+const p=e.target.dataset.p; if(!p)return;
+COUNT.clear(); if(p==='core')CORE.forEach(i=>COUNT.add(i)); if(p==='all')AX.forEach((_,i)=>COUNT.add(i));
+buildPicker(); recluster(); render();
+});
+
+function renderCorr(){
+const ids=[...COUNT].sort((a,b)=>ORDER.indexOf(a)-ORDER.indexOf(b));
+if(ids.length<3){$('corrnote').textContent='Choose at least three axes under “Totals count” to see correlations.';$('corrtab').innerHTML='';return;}
+const inA=new Set(CL2[0]);
+const sorted=[...ids].sort((a,b)=>(inA.has(b)-inA.has(a))||ORDER.indexOf(a)-ORDER.indexOf(b));
+let h='<tr><th></th>'+sorted.map(j=>'<th class="cl"><span>'+axLabel(j)+' '+esc(AX[j][0])+'</span></th>').join('')+'<th class="cl"><span>mean |r|</span></th></tr>';
+sorted.forEach(i=>{
+h+='<tr><th class="rl">'+(inA.has(i)?'A':'B')+' &middot; '+axLabel(i)+' '+esc(AX[i][0])+'</th>';
+sorted.forEach(j=>{const r=i===j?1:corr(i,j),m=Math.abs(r)*100;
+h+='<td><i style="background:'+(i===j?'var(--rule)':band(m))+';color:'+(i===j?'var(--soft)':inkOn(m))+'">'+(i===j?'':r.toFixed(2).replace('0.','.'))+'</i></td>';});
+h+='<td><i>'+meanAbs(i,ids).toFixed(2)+'</i></td></tr>';
+});
+$('corrtab').innerHTML=h;
+const lone=CL3.find(c=>c.length===1);
+$('corrnote').innerHTML='Pearson correlations between axis scores across the traditions, for the '+ids.length+' axes now counted in the totals. Darker means the two axes move together more strongly, in either direction; a minus sign means opposite directions. Cells marked n/a are left out pairwise. Rows are labelled with the computed cluster, A or B.'
++(lone?' At three clusters, '+esc(AX[lone[0]][0])+' stands alone, with a mean |r| of '+meanAbs(lone[0],ids).toFixed(2)+'.':'')
++' With only thirty traditions, a single changed score can move these figures; read them as a description of this draft, not as a measurement.';
+}
+
+RAW.forEach(f=>{const o=document.createElement('option');o.value=f[0];o.textContent=f[0];$('fam').appendChild(o);});
+[...T].sort((a,b)=>a.name.localeCompare(b.name)).forEach(t=>{
+const o=document.createElement('option');o.value=t.name;o.textContent=t.name;$('hl').appendChild(o);});
+document.addEventListener('click',e=>{
+if(!e.target.closest('#pick')) $('pick').removeAttribute('open');
+const ax=e.target.closest('.ax[data-ax]');
+if(ax){focus = focus===+ax.dataset.ax ? null : +ax.dataset.ax; render(); return;}
+const at=e.target.closest('.atk');
+if(at){const t=T.find(x=>x.name===at.dataset.at),a=ATONE[t.name];
+$('psc').textContent='Model of the atonement  —  categories, not a spectrum';
+$('pt').innerHTML='<b>'+esc(t.name)+'</b> &mdash; '+esc(ATCAT[a[0]]);
+$('pn').textContent=a[1]+'. Most traditions hold more than one model, and few define one bindingly. The models are alternatives rather than points on a line, so they are named here and not scored. Provisional (v7).';
+$('pm').innerHTML='';$('panel').classList.add('on');return;}
+const c=e.target.closest('.cell');
+if(c){
+const ti=T.findIndex(x=>x.name===c.dataset.t), t=T[ti], i=+c.dataset.a, a=AX[i], v=t.s[i];
+$('psc').textContent=a[0]+'  —  '+(v===null?'not applicable':('score '+v+'  ·  rank '+RANK[i][ti]+' of '+RN[i]))+'  ·  '+a[1]+' at 0, '+a[2]+' at 100'+(a[4]?'  ·  provisional':'');
+$('pt').innerHTML='<b>'+esc(t.name)+'</b>';
+const note=N[t.name+'|'+a[3]]||'No placement note has been written for this pairing yet.';
+$('pn').textContent=note+(AXNOTE[a[3]]?'  '+AXNOTE[a[3]]:'');
+$('pm').innerHTML=t.s.map((x,j)=>'<i style="background:'+(x===null?'#55645F':band(x))+';'+(j===i?'opacity:1;outline:1px solid #F0D9A8':'')+'"></i>').join('');
+$('panel').classList.add('on');
+}
+});
+$('pclose').onclick=()=>$('panel').classList.remove('on');
+document.addEventListener('keydown',e=>{if(e.key==='Escape')$('panel').classList.remove('on');});
+['q','fam','sort'].forEach(id=>$(id).addEventListener('input',render));
+$('spec').addEventListener('change',()=>{const v=visAx();if(focus!==null&&!v.includes(focus))focus=null;render();});
+$('hl').addEventListener('change',render);
+$('atone').addEventListener('change',render);
+$('mScore').onclick=()=>{mode='score';$('mScore').classList.add('on');$('mRank').classList.remove('on');render();};
+$('mRank').onclick=()=>{mode='rank';$('mRank').classList.add('on');$('mScore').classList.remove('on');render();};
+$('corrbtn').onclick=()=>{$('corr').classList.toggle('on');render();if($('corr').classList.contains('on'))$('corr').scrollIntoView({behavior:'smooth'});};
+$('reset').onclick=()=>{$('q').value='';$('fam').value='';$('sort').value='fam';$('spec').value='all';focus=null;
+$('hl').value='';$('atone').checked=false;mode='score';$('mScore').classList.add('on');$('mRank').classList.remove('on');
+COUNT.clear();CORE.forEach(i=>COUNT.add(i));buildPicker();recluster();render();};
+buildPicker();
+recluster();
+$('sabr').textContent=meanAbs(9,CORE).toFixed(2);
+render();
+wireLinks();
+</script>
+</body>
+</html>

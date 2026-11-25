@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Christian Traditions: A Theological Spectrum</title>
+<meta name="description" content="Thirty Christian traditions placed along fourteen theological axes, with a glossary, an interactive chart and a self-placement survey. By S. Harrison Knudson.">
+<link rel="canonical" href="https://sonofgod.love/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Son of God · A Theological Spectrum">
+<meta property="og:title" content="Christian Traditions: A Theological Spectrum">
+<meta property="og:description" content="Thirty Christian traditions placed along fourteen theological axes, with a glossary, an interactive chart and a self-placement survey. By S. Harrison Knudson.">
+<meta property="og:url" content="https://sonofgod.love/">
+<meta name="author" content="S. Harrison Knudson">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://sonofgod.love/#site", "url": "https://sonofgod.love/", "name": "Son of God", "alternateName": "Christian Traditions: A Theological Spectrum", "author": {"@id": "https://sonofgod.love/library#author"}}, {"@type": "Dataset", "name": "Christian Traditions: A Theological Spectrum (version 7)", "description": "Thirty Christian traditions placed along fourteen theological axes, with a glossary, an interactive chart and a self-placement survey. By S. Harrison Knudson.", "url": "https://sonofgod.love/chart", "creator": {"@id": "https://sonofgod.love/library#author"}, "version": "7", "dateModified": "2026-11"}, {"@type": "Person", "@id": "https://sonofgod.love/library#author", "name": "S. Harrison Knudson", "honorificSuffix": "J.D.", "alternateName": ["Steele Harrison Knudson", "S Harrison Knudson", "Steele H. Knudson", "Steele Knudson", "Harrison Knudson"], "givenName": "Steele", "additionalName": "Harrison", "familyName": "Knudson", "url": "https://sonofgod.love/library", "sameAs": ["https://orcid.org/0009-0004-3600-4115", "https://semperism.org/about.html", "https://ifcsis.org/director.html", "https://semperism.substack.com", "https://superelements.com/"], "knowsAbout": ["New Testament", "Gospel of Matthew", "Cleansing of the Temple", "Social-scientific criticism", "Church and state", "Christian denominations"]}]}</script>
+
+<style>
+:root{
+  --stone:#E4E8E4;--surface:#F3F5F2;--ink:#182029;--soft:#4A5A61;--faint:#7C8A8E;
+  --rule:#BFC7BF;--verd:#2E6E60;--gold:#9A6E1F;--wash:#EFE2C4;
+  --ramp:linear-gradient(90deg,#EFE0C0 0%,#DDBB7A 25%,#C98F4E 50%,#A85F35 75%,#7A3B22 100%);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--stone);color:var(--ink);
+ font:400 16px/1.55 Georgia,'Times New Roman',serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px 80px}
+
+/* ---- shared nav: paste this same block at the top of every page ---- */
+.sitenav{display:flex;flex-wrap:wrap;gap:4px 22px;align-items:center;
+ padding:16px 0;border-bottom:1px solid var(--rule)}
+.sitenav a{font:500 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--soft);text-decoration:none;padding:6px 0}
+.sitenav a:hover{color:var(--verd)}
+.sitenav a.here{color:var(--ink);border-bottom:2px solid var(--gold)}
+.sitenav .mark{font:400 13px/1 Georgia,serif;letter-spacing:.02em;color:var(--ink);
+ margin-right:auto;text-transform:none}
+
+header.hero{padding:56px 0 10px}
+.eyebrow{font:500 11px/1.5 ui-monospace,Menlo,monospace;letter-spacing:.2em;
+ text-transform:uppercase;color:var(--verd);margin:0 0 16px}
+h1{font-size:clamp(30px,5.4vw,58px);line-height:1.02;margin:0 0 16px;
+ font-weight:400;letter-spacing:-.02em;max-width:17ch}
+.lede{max-width:60ch;color:var(--soft);font-size:17.5px;margin:0}
+.rampbar{height:16px;background:var(--ramp);border:1px solid rgba(24,32,41,.16);margin:30px 0 0}
+.rampcap{display:flex;justify-content:space-between;margin:7px 0 0;
+ font:500 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.1em;
+ text-transform:uppercase;color:var(--faint)}
+
+.doors{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:44px 0 0}
+.doors3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:1000px){.doors3{grid-template-columns:1fr}}
+@media(max-width:760px){.doors{grid-template-columns:1fr}}
+.door{display:block;text-decoration:none;color:inherit;background:var(--surface);
+ border:1px solid var(--rule);border-left:3px solid var(--verd);padding:30px 30px 28px}
+.door:hover{border-left-color:var(--gold);background:#F7F8F5}
+.door .k{font:500 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.16em;
+ text-transform:uppercase;color:var(--verd);margin:0 0 12px}
+.door h2{font:400 24px/1.15 Georgia,serif;margin:0 0 10px}
+.door p{margin:0 0 16px;color:var(--soft);font-size:15px;max-width:42ch}
+.door .cta{font:500 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--ink);border-bottom:2px solid var(--gold);
+ padding-bottom:4px;display:inline-block}
+.door ol.tiers{margin:0 0 16px;padding-left:18px;color:var(--soft);font-size:14px;max-width:40ch}
+.door ol.tiers li{margin-bottom:5px;line-height:1.4}
+.door ol.tiers b{color:var(--ink)}
+.door .meta{display:block;margin-top:14px;font:400 13px/1.4 Georgia,serif;color:var(--faint)}
+
+.about{margin:56px 0 0;padding-top:26px;border-top:1px solid var(--rule)}
+.about h3{font:400 24px/1.2 Georgia,serif;margin:0 0 12px}
+.about p{max-width:70ch;color:var(--soft);font-size:15.5px;margin:0 0 13px}
+.about b{color:var(--ink)}
+
+.draft{background:var(--surface);border-left:3px solid var(--verd);padding:20px 24px;margin:34px 0 0}
+.draft h4{margin:0 0 8px;font:500 10.5px/1 ui-monospace,Menlo,monospace;
+ letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.draft p{margin:0 0 12px;color:var(--soft);font-size:14.5px;max-width:72ch}
+.draft ol{margin:0 0 16px;padding-left:20px;color:var(--soft);font-size:14.5px;max-width:70ch}
+.draft li{margin-bottom:3px}
+.draft li b{color:var(--ink)}
+a.mail{display:inline-block;background:var(--verd);color:#F1F4F1;text-decoration:none;
+ padding:11px 20px;border-radius:2px;font:500 11px/1 ui-monospace,Menlo,monospace;
+ letter-spacing:.13em;text-transform:uppercase}
+a.mail:hover{background:var(--ink)}
+
+footer{margin-top:44px;padding-top:22px;border-top:1px solid var(--rule);
+ font:400 12.5px/1.6 ui-monospace,Menlo,monospace;color:var(--faint);max-width:76ch}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ============ SHARED NAV — same block on every page ============ -->
+<nav class="sitenav"><span class="mark">A Theological Spectrum</span><a href="/" data-to="home" class="here">Home</a><a href="/glossary" data-to="glossary">Glossary</a><a href="/chart" data-to="chart">View the chart</a><a href="/survey" data-to="survey">Take the survey</a><a href="/library" data-to="library">Library</a></nav>
+<!-- =============================================================== -->
+
+<header class="hero">
+  <p class="eyebrow">30 traditions &middot; 14 axes + 3 provisional &middot; version 7 &middot; working draft</p>
+  <h1>Christian Traditions: A Theological Spectrum</h1>
+  <p class="lede">A family tree shows where a denomination came from. This shows where it stands. Thirty Christian traditions placed along fourteen theological axes, with three more in draft, &mdash; and a way to find where you sit among them.</p>
+  <div class="rampbar"></div>
+  <div class="rampcap"><span>left-hand pole</span><span>right-hand pole</span></div>
+</header>
+
+<div class="doors doors3">
+  <a class="door" href="/glossary" data-to="glossary">
+    <p class="k">One</p>
+    <h2>Glossary</h2>
+    <p>Ninety-five terms as they are used here, defined in ordinary language and grouped by the three spectrums and their axes. Start here if a word on the chart is unfamiliar.</p>
+    <span class="cta">Open the glossary</span>
+    <span class="meta">Searchable &middot; no jargon assumed</span>
+  </a>
+  <a class="door" href="/chart" data-to="chart">
+    <p class="k">Two</p>
+    <h2>The spectrum chart</h2>
+    <p>Thirty Christian traditions across fourteen theological axes and three provisional ones, grouped into three spectrums that can be read one at a time. Rank every tradition along a single axis, or open any placement to read the reasoning behind it.</p>
+    <span class="cta">View the chart</span>
+    <span class="meta">Interactive &middot; no sign-in</span>
+  </a>
+  <a class="door" href="/survey" data-to="survey">
+    <p class="k">Three</p>
+    <h2>The surveys</h2>
+    <p>Three sets, taken in order or stopped at any point:</p>
+    <ol class="tiers">
+      <li><b>Matching the spectrum</b> &mdash; fourteen statements, one per axis</li>
+      <li><b>Matching the denominations</b> &mdash; thirty-six more, drawing finer distinctions</li>
+      <li><b>Beliefs on neither</b> &mdash; eleven questions that cannot be charted at all</li>
+    </ol>
+    <span class="cta">Start the surveys</span>
+    <span class="meta">Three minutes for the first set &middot; nothing is stored or sent</span>
+  </a>
+</div>
+
+<section class="about">
+  <h3>The library</h3>
+  <p>Alongside the spectrum, this site keeps one-page briefs of current theological and church-and-state work by S. Harrison Knudson. <a href="/library" style="color:var(--verd)">Browse the library</a>.</p>
+</section>
+
+<section class="about">
+  <h3>What this is</h3>
+  <p>Each axis runs between two named positions, and each tradition is placed somewhere along it. A higher number means further toward the right-hand pole &mdash; not <b>more</b>, and not <b>better</b>. The colour darkens along the same range, so a row read left to right shows the shape of a tradition&rsquo;s position rather than any verdict about it.</p>
+  <p>Nothing here measures faithfulness, truth, or authenticity. Distance from a pole is distance, not error.</p>
+  <p>Not every belief fits an axis. Some questions divide traditions over whether the question even applies; some almost no tradition has ruled on; one or two are taught by a single tradition alone. Those are asked in the third survey and reported without a score, alongside what a range of traditions actually teach. Where something cannot be placed on the spectrum, that is said rather than forced.</p>
+</section>
+
+<div class="draft">
+  <h4>This is a draft. Corrections are wanted.</h4>
+  <p>It is unpublished and unreviewed, built in the first instance for my own use. Some placements are wrong; I would rather know which. The most useful correction names four things:</p>
+  <ol>
+    <li><b>The tradition</b> &mdash; which of the 30</li>
+    <li><b>The axis</b> &mdash; which of the 17</li>
+    <li><b>The score you would assign instead</b> &mdash; a number from 0 to 100</li>
+    <li><b>A source</b> &mdash; a confession, catechism, official statement or standard reference</li>
+  </ol>
+  <p><a class="mail" href="mailto:steele@sonofgod.love?subject=Spectrum%20chart%20correction&amp;body=Tradition%3A%20%0AAxis%3A%20%0AScore%20I%20would%20assign%3A%20%0ASource%3A%20%0A%0AWhat%20the%20current%20placement%20gets%20wrong%3A%20%0A">Send a correction</a></p>
+</div>
+
+<footer>
+  Christian Traditions: A Theological Spectrum. Version 7, November 2026.<br>
+  S. Harrison Knudson, J.D. &middot; Cite the version; earlier versions are superseded.<br>
+  Inspired by the Christian Denominations Family Tree by Dr. Matt Baker / UsefulCharts.
+</footer>
+
+</div>
+<script>
+/* ==================================================================
+   PAGE LINKS — the only thing you may need to change.
+   If your GoDaddy pages sit at different paths, edit the four values
+   below to match the address bar exactly, e.g. "/glossary-1".
+   This same block appears at the top of the script on all four pages.
+   ================================================================== */
+const LINKS = {
+  home:     "/",
+  glossary: "/glossary",
+  chart:    "/chart",
+  survey:   "/survey",
+  library:  "/library"
+};
+/* ================================================================== */
+function wireLinks(){
+  document.querySelectorAll('[data-to]').forEach(a=>{
+    const k=a.getAttribute('data-to');
+    if(LINKS[k]) a.setAttribute('href', LINKS[k]);
+  });
+}
+wireLinks();
+</script>
+</body>
+</html>

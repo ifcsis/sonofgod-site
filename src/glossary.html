@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glossary — A Theological Spectrum</title>
+<style>
+:root{
+  --stone:#E4E8E4;--surface:#F3F5F2;--ink:#182029;--soft:#4A5A61;--faint:#7C8A8E;
+  --rule:#BFC7BF;--verd:#2E6E60;--gold:#9A6E1F;--wash:#EFE2C4;
+  --ramp:linear-gradient(90deg,#EFE0C0 0%,#DDBB7A 25%,#C98F4E 50%,#A85F35 75%,#7A3B22 100%);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--stone);color:var(--ink);
+ font:400 16px/1.55 Georgia,'Times New Roman',serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px 90px}
+
+.sitenav{display:flex;flex-wrap:wrap;gap:4px 22px;align-items:center;
+ padding:16px 0;border-bottom:1px solid var(--rule)}
+.sitenav a{font:500 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--soft);text-decoration:none;padding:6px 0}
+.sitenav a:hover{color:var(--verd)}
+.sitenav a.here{color:var(--ink);border-bottom:2px solid var(--gold)}
+.sitenav .mark{font:400 13px/1 Georgia,serif;color:var(--ink);margin-right:auto;text-transform:none}
+
+header{padding:44px 0 16px;border-bottom:2px solid var(--ink)}
+.eyebrow{font:500 11px/1.5 ui-monospace,Menlo,monospace;letter-spacing:.2em;
+ text-transform:uppercase;color:var(--verd);margin:0 0 14px}
+h1{font-size:clamp(28px,4.6vw,48px);line-height:1.03;margin:0 0 12px;font-weight:400;letter-spacing:-.02em}
+.lede{max-width:62ch;color:var(--soft);margin:0}
+
+.tools{position:sticky;top:0;background:var(--stone);padding:16px 0 14px;z-index:9;
+ border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+input[type=search]{font:400 15px/1 Georgia,serif;background:var(--surface);
+ border:1px solid var(--rule);border-radius:2px;padding:10px 12px;color:var(--ink);width:250px}
+select{font:400 14px/1 Georgia,serif;background:var(--surface);border:1px solid var(--rule);
+ border-radius:2px;padding:9px 10px;color:var(--ink)}
+.lbl{font:500 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.1em;
+ text-transform:uppercase;color:var(--soft)}
+.count{margin-left:auto;font:500 10.5px/1 ui-monospace,Menlo,monospace;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+
+.group{margin:38px 0 0}
+.group h2{font:500 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.16em;
+ text-transform:uppercase;color:var(--verd);margin:0 0 4px;padding-bottom:6px;
+ border-bottom:1px solid var(--verd)}
+.entry{padding:16px 0 15px;border-bottom:1px solid rgba(191,199,191,.5)}
+.entry h3{font:400 19px/1.2 Georgia,serif;margin:0 0 3px}
+.entry .alt{font:400 13.5px/1.3 Georgia,serif;color:var(--faint);font-style:italic;margin:0 0 7px}
+.entry p{margin:0;color:var(--soft);font-size:15px;max-width:74ch}
+.entry p + p{margin-top:8px}
+.entry .poles{display:inline-block;margin-top:9px;font:500 10px/1.5 ui-monospace,Menlo,monospace;
+ letter-spacing:.08em;text-transform:uppercase;color:var(--gold);
+ background:var(--wash);padding:5px 9px;border-radius:2px}
+.none{padding:40px 0;color:var(--faint);font-style:italic}
+
+.crosslink{margin:46px 0 0;padding:22px 26px;background:var(--surface);
+ border:1px solid var(--rule);border-left:3px solid var(--gold)}
+.crosslink h4{margin:0 0 7px;font:400 21px/1.2 Georgia,serif}
+.crosslink p{margin:0 0 12px;color:var(--soft);font-size:15px;max-width:60ch}
+.crosslink a{display:inline-block;background:var(--verd);color:#F1F4F1;text-decoration:none;
+ padding:12px 20px;border-radius:2px;font:500 11px/1 ui-monospace,Menlo,monospace;
+ letter-spacing:.13em;text-transform:uppercase;margin-right:8px}
+.crosslink a:hover{background:var(--ink)}
+
+footer{margin-top:44px;padding-top:22px;border-top:1px solid var(--rule);
+ font:400 12.5px/1.6 ui-monospace,Menlo,monospace;color:var(--faint);max-width:76ch}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="sitenav"><span class="mark">A Theological Spectrum</span>
+  <a href="/" data-to="home" target="_top">Home</a>
+  <a href="/glossary" data-to="glossary" target="_top" class="here">Glossary</a>
+  <a href="/chart" data-to="chart" target="_top">View the chart</a>
+  <a href="/survey" data-to="survey" target="_top">Take the survey</a>
+</nav>
+
+<header>
+  <p class="eyebrow">Plain definitions &middot; version 7 &middot; working draft</p>
+  <h1>Glossary</h1>
+  <p class="lede">Ninety-five terms used on the chart and in the survey, defined in ordinary language and grouped by the spectrum and axis they belong to. Definitions describe what a position holds, not whether it is right. Where a term is contested, or where the chart itself is doing something arguable, that is said rather than smoothed over.</p>
+</header>
+
+<div class="tools">
+  <span class="lbl">Find <input type="search" id="q" placeholder="term or word&hellip;" autocomplete="off"></span>
+  <span class="lbl">Group
+    <select id="g"><option value="">All terms</option></select>
+  </span>
+  <span class="count" id="count"></span>
+</div>
+
+<div id="list"></div>
+
+<div class="crosslink">
+  <h4>Now put it to use</h4>
+  <p>The chart places thirty traditions along these axes. The survey shows where your own answers fall among them.</p>
+  <a href="/chart" data-to="chart" target="_top">View the chart</a>
+  <a href="/survey" data-to="survey" target="_top">Take the survey</a>
+</div>
+
+<footer>
+  Christian Traditions: A Theological Spectrum. Version 7, November 2026.<br>
+  S. Harrison Knudson, J.D. &middot; Corrections welcome.
+</footer>
+
+</div>
+
+<script>
+/* ==================================================================
+   PAGE LINKS — the only thing you may need to change.
+   If your GoDaddy pages sit at different paths, edit the four values
+   below to match the address bar exactly, e.g. "/glossary-1".
+   This same block appears at the top of the script on all four pages.
+   ================================================================== */
+const LINKS = {
+  home:     "/",
+  glossary: "/glossary",
+  chart:    "/chart",
+  survey:   "/survey"
+};
+/* ================================================================== */
+function wireLinks(){
+  document.querySelectorAll('[data-to]').forEach(a=>{
+    const k=a.getAttribute('data-to');
+    if(LINKS[k]) a.setAttribute('href', LINKS[k]);
+  });
+}
+
+// g = group, t = term, alt = other names, d = definition, poles = the axis it anchors
+const G=[
+ ["How to read the chart", [
+  {t:"Axis",d:"One dimension of comparison running between two named positions, scored 0 to 100. A tradition's place on an axis says how far it sits toward one end, not how correct it is."},
+  {t:"Pole",d:"Either end of an axis. Poles are named positions, not verdicts: the left pole of an axis is not more faithful or more original than the right."},
+  {t:"Ordinal and cardinal",d:"An ordinal claim says one thing comes before another. A cardinal claim says exactly how much. The scores here are meant ordinally: that one tradition sits further along an axis than another is the claim being made. The specific digit is not defensible on its own."},
+  {t:"Anchor",d:"The point treated as zero on a chart. The poster versions of this chart move the anchor deliberately — once to the adherent-weighted majority position, once to the mean of all traditions charted — to show that the picture reorganises depending on where you stand."},
+  {t:"Adherent-weighted",d:"Counted by number of members rather than by number of denominations. A majority by adherents is not thereby correct; it is merely the largest."}
+ ]],
+ ["The three spectrums", [
+  {t:"Spectrum",d:"One of three conceptual groups the core axes are divided into. Spectrum I, Authority and Revelation, covers where authority comes from and who holds it. Spectrum II, God, Salvation and Last Things, covers what is believed about God and what becomes of us. Spectrum III, Worship and Practice, covers what a member actually does. Sabbath observance stands on its own, and the three provisional axes added in version 7 form a group of their own."},
+  {t:"Why three and not two",d:"Correlating the core axes across all thirty traditions splits them into two groups, not three. The three-way arrangement used here is a presentational choice laid over that result, chosen because each part carries a headline a non-specialist can hold. Since version 7 the chart shows both: the conceptual three, and the two clusters the data produce, recomputed from the scores. It is a decision about legibility, not a finding about theology, and it is admitted as such wherever the chart appears."},
+  {t:"Independent axis",d:"An axis that does not correlate with the others, and so cannot be predicted from them. Sabbath observance is the most independent on this chart, averaging a correlation of only 0.19 with the other core axes. Since version 7 it stands on its own, marked S, rather than being placed in Spectrum III."},
+  {t:"Subtotal",d:"The sum of the scores on one spectrum only. More defensible than the old total across all fourteen, because it sums like with like. A tradition can sit far out on practice and near the centre on doctrine, which a single total conceals."}
+ ]],
+ ["Branches of theology", [
+  {t:"Ecclesiology",d:"The doctrine of the church: what the church is, who belongs to it, and where its authority comes from."},
+  {t:"Soteriology",d:"The doctrine of salvation: what saves a person, and what part human will plays in it."},
+  {t:"Eschatology",d:"The doctrine of last things: death, judgement, the return of Christ, and the end of the age."},
+  {t:"Christology",d:"The doctrine of the person of Christ: how his divinity and humanity relate."},
+  {t:"Sacramental theology",d:"The doctrine of rites such as baptism and communion: what they do, and whether they convey anything beyond their symbolism."}
+ ]],
+ ["I.1 — Church government", [
+  {t:"Episcopal polity",d:"Government by bishops, in a hierarchy."},
+  {t:"Presbyterian polity",d:"Government by graded courts of elders — session, presbytery, assembly."},
+  {t:"Congregational polity",d:"Government by the local congregation, which is self-ruling."},
+  {t:"Autocephalous",d:"Self-headed. Used of national Orthodox churches that are fully independent in governance while remaining in communion with one another."},
+  {t:"Connectionalism",d:"A middle structure in which congregations are bound together in a shared body with mutual obligations, without a single central hierarchy."}
+ ]],
+ ["I.2 — Priesthood and ministry", [
+  {t:"Priesthood of all believers",d:"The Reformation principle that every Christian has direct access to God without a mediating priest. Distinct from lay priesthood office: it concerns access, not ordination."},
+  {t:"Lay priesthood",d:"A structure in which ordinary unpaid members hold formal priesthood office and administer ordinances."},
+  {t:"Aaronic and Melchizedek priesthood",d:"Two orders of priesthood named in scripture, distinguished as preparatory and higher in traditions that ordain laymen to both."},
+  {t:"Ordination",d:"Formal setting apart for ministry. Traditions differ over who may be ordained, by whom, and whether ordination is necessary for valid sacraments."}
+ ]],
+ ["I.3 — Scripture and authority", [
+  {t:"Canon",d:"The set of books recognised as scripture. A closed canon admits no additions; an open canon holds that God may still add to it."},
+  {t:"Sola scriptura",d:"Scripture alone as the final authority in matters of faith, above tradition and church office."},
+  {t:"Prima scriptura",d:"Scripture as first among authorities, with tradition and reason genuinely contributing rather than merely applying it."},
+  {t:"Magisterium",d:"The teaching authority of the church, understood as competent to define doctrine bindingly."},
+  {t:"Continuing revelation",d:"The conviction that God still gives binding revelation — through a prophet, a council, or the inward witness of the Spirit."},
+  {t:"Inner Light",d:"In the Quaker tradition, the direct inward presence of God in each person, which may be relied on ahead of any outward text or office."}
+ ]],
+ ["I.4 — Ecclesial exclusivity", [
+  {t:"Subsistit in",alt:"subsists in",d:"The formula of Vatican II: the church of Christ subsists in the Catholic Church. Deliberately weaker than a flat identification, it allows that elements of the true church exist beyond its visible boundaries."},
+  {t:"Valid orders",d:"Whether a body's ordinations are recognised as genuine by another body. A church may regard another's baptism as valid while regarding its ordinations as not."},
+  {t:"Branch theory",d:"The view, associated with some Anglicans, that the one church subsists in several branches — commonly Roman, Orthodox and Anglican — none of which is the whole."},
+  {t:"Invincible ignorance",d:"In Catholic theology, the condition of someone who fails to recognise the truth through no fault of their own, and who is not held culpable for it. A significant softening of exclusivist claims."}
+ ]],
+ ["I.5 — Primitivism and Restorationism", [
+  {t:"Primitivism",alt:"Restitutionism",d:"The conviction that the church of the New Testament is the pattern, and that later development is decline rather than growth. Primitivists aim to strip away accretions and recover the original."},
+  {t:"Restorationism",d:"The stronger claim that the original church was not merely obscured but lost, and had to be restored — often by direct divine action rather than by scholarship or reform."},
+  {t:"Apostolic succession",d:"The doctrine that authority passes in an unbroken line from the apostles through the laying on of hands. Traditions holding it regard that continuity as never having been broken; restorationist traditions hold that it was."},
+  {t:"Great Apostasy",d:"The belief that the early church fell into widespread error after the apostolic age. Held in different forms and to different degrees by several restorationist traditions."}
+ ]],
+ ["II.1 — How salvation works", [
+  {t:"Monergism",d:"Salvation as the work of God alone. The human will contributes nothing to conversion."},
+  {t:"Synergism",d:"Salvation as a cooperation between divine grace and human freedom. Grace is necessary and comes first, but can be resisted."},
+  {t:"Election",alt:"predestination",d:"God's choosing of those who will be saved. Unconditional election holds that the choice rests on God's will rather than on anything foreseen in the person."},
+  {t:"Prevenient grace",d:"Grace that goes before and enables a free human response, held by traditions that reject both unaided free will and unconditional election."},
+  {t:"Theosis",alt:"deification",d:"In Orthodox theology, salvation as growing participation in the divine nature — a process rather than a verdict."},
+  {t:"Ordinance and sacrament",d:"Two words for religious rites. Ordinance usually signals an act of obedience; sacrament usually signals that the rite conveys grace. The choice of word is itself a doctrinal position."}
+ ]],
+ ["II.2 — The end of the age", [
+  {t:"Amillennial",d:"Reading the thousand years of Revelation symbolically, as the present age rather than a coming period."},
+  {t:"Premillennial",d:"Holding that Christ returns before a literal millennial reign."},
+  {t:"Postmillennial",d:"Holding that Christ returns after a long period of the gospel's success in the world."},
+  {t:"Dispensationalism",d:"A framework dividing history into distinct dispensations, commonly with a pretribulation rapture and a detailed prophetic sequence. Originated with J. N. Darby in the nineteenth century."},
+  {t:"Historicism",d:"Reading prophecy as unfolding across the whole span of church history, with identifiable fulfilments in past events."},
+  {t:"Preterism",d:"Reading prophecy as largely fulfilled already, often in the events of the first century."},
+  {t:"Idealism",d:"Reading prophecy as depicting the perennial conflict of good and evil rather than a datable sequence."}
+ ]],
+ ["II.3 — Salvation and the afterlife", [
+  {t:"Purgatory",d:"A state of purification after death for those who die in grace but not yet perfected."},
+  {t:"Soul sleep",alt:"conditional immortality",d:"The view that the dead are unconscious until the resurrection, rather than immediately in heaven or hell."},
+  {t:"Annihilationism",d:"The view that the finally unrepentant cease to exist rather than suffering eternally."},
+  {t:"Universalism",d:"The view that all will ultimately be reconciled to God."},
+  {t:"Degrees of glory",d:"The view that final outcomes are tiered rather than binary, with nearly everyone receiving some measure of salvation."},
+  {t:"Spirit world",d:"An intermediate state between death and resurrection in which, on some accounts, the gospel continues to be preached."}
+ ]],
+ ["II.4 — The creeds and the nature of God", [
+  {t:"Nicene",d:"Conforming to the creed issued at Nicaea in 325 and expanded at Constantinople in 381 — one God in three persons of one substance. The reference point most Christian bodies define themselves in relation to."},
+  {t:"Consubstantial",alt:"homoousios",d:"Of the same substance or being. The word at the centre of the fourth-century disputes: the Son is not merely like the Father but of the same being."},
+  {t:"Chalcedonian",d:"Conforming to the definition of 451, that Christ is one person in two natures, divine and human, without confusion or division."},
+  {t:"Miaphysite",d:"The position of the Oriental Orthodox churches: Christ has one united nature, both divine and human. Distinct from the view condemned at Chalcedon, and a narrower divergence than it is often taken to be."},
+  {t:"Arian",d:"Holding that the Son is a created being, subordinate to the Father rather than co-eternal with him. Named for Arius, a fourth-century presbyter."},
+  {t:"Modalism",alt:"Sabellianism, Oneness",d:"Holding that Father, Son and Spirit are not three persons but three modes or manifestations of one person."},
+  {t:"Social trinitarianism",d:"Holding that Father, Son and Spirit are three distinct beings perfectly united in purpose, rather than one being in three persons. Affirms the divinity of each while declining the creedal formulation."},
+  {t:"Unitarian",d:"Holding that God is one person, and that Jesus is not God in the sense the creeds intend."},
+  {t:"Godhead",d:"A general term for the divine nature or for Father, Son and Spirit together. Used by traditions that affirm all three while differing on how they are united."}
+ ]],
+ ["III.1 — The gifts of the Spirit", [
+  {t:"Cessationism",d:"The view that the miraculous gifts — tongues, prophecy, healing — belonged to the apostolic age and ceased with it."},
+  {t:"Continuationism",d:"The view that those gifts continue to operate in the church today."},
+  {t:"Glossolalia",alt:"speaking in tongues",d:"Ecstatic or unlearned speech understood as a gift of the Spirit. Some traditions treat it as the initial evidence of Spirit baptism; others as one gift among many; others as ended."},
+  {t:"Baptism of the Spirit",d:"An experience of empowerment understood as distinct from water baptism. Central to Pentecostal traditions, understood differently or not at all elsewhere."}
+ ]],
+ ["III.2 — Communion", [
+  {t:"Transubstantiation",d:"The doctrine that the bread and wine become the body and blood of Christ in substance, while the outward appearances remain."},
+  {t:"Sacramental union",d:"The Lutheran position that Christ is truly present in, with and under the elements, without their substance changing."},
+  {t:"Spiritual real presence",d:"The Reformed position that Christ is truly received by faith, though not locally present in the elements."},
+  {t:"Memorialism",d:"The position that the rite is a remembrance and an act of obedience, conveying nothing in itself. Associated with Zwingli."},
+  {t:"Ex opere operato",d:"Literally, from the work worked: the view that a sacrament is effective by virtue of the rite itself rather than the worthiness of the minister."}
+ ]],
+ ["III.3 — Evangelism and missions", [
+  {t:"Proselytism",d:"Actively seeking converts. Some traditions treat it as a duty of every member; others regard the word itself as pejorative and prefer witness."},
+  {t:"Witness",d:"Commending the faith by testimony or example rather than by persuasion. Traditions differ over whether this discharges the obligation or falls short of it."},
+  {t:"Full-time mission",d:"A set term of dedicated missionary service, undertaken as an expectation of ordinary membership rather than as a vocation for specialists."},
+  {t:"Great Commission",d:"The instruction at the end of Matthew's gospel to make disciples of all nations. Cited by nearly every tradition, and understood as binding on all members by only some."}
+ ]],
+ ["III.4 — Baptism", [
+  {t:"Paedobaptism",alt:"infant baptism",d:"Baptising infants, who are received into the covenant community before they can profess faith."},
+  {t:"Credobaptism",alt:"believer's baptism",d:"Baptising only those who can profess faith for themselves."},
+  {t:"Baptismal regeneration",d:"The doctrine that baptism itself effects the new birth, rather than symbolising a change already made."},
+  {t:"Proxy baptism",alt:"baptism for the dead",d:"Baptism performed by a living person on behalf of someone who died without it."},
+  {t:"Immersion, affusion, aspersion",d:"The three modes: full submersion, pouring, and sprinkling. Traditions differ on whether the mode is essential or indifferent."}
+ ]],
+ ["S — Sabbath observance (on its own)", [
+  {t:"Sabbatarianism",d:"The conviction that a weekly day of rest is divinely commanded and binding, and that it should be kept strictly."},
+  {t:"Lord's Day",d:"Sunday, observed in commemoration of the resurrection. Most traditions distinguish it from the Sabbath proper; others identify the two."},
+  {t:"Seventh-day observance",d:"Keeping Saturday, sunset Friday to sunset Saturday, on the ground that the fourth commandment was never transposed to another day."},
+  {t:"Ceremonial and moral law",d:"A distinction used to sort which Old Testament commands still bind Christians. Where the Sabbath command falls in that division is precisely what is disputed."}
+ ]],
+ ["Terms used across several axes", [
+  {t:"Orthodoxy and orthopraxy",d:"Right belief and right practice. Traditions differ in which they treat as the primary test of faithfulness."},
+  {t:"Heresy",d:"A teaching judged by a body to depart from its own doctrinal standard. Historically a term used within Christendom about its own members, not a mechanism for expelling a group from Christianity altogether."},
+  {t:"Schism",d:"A break in communion over authority or practice rather than over doctrine as such."},
+  {t:"Ecumenical",d:"Concerning the whole church. Used both of the early councils and of modern efforts at cooperation across traditions."},
+  {t:"Confession",d:"A formal written statement of a tradition's doctrine — the Augsburg Confession, the Westminster Confession, and others. A standard source for scoring positions on this chart."},
+  {t:"Catechism",d:"A structured summary of doctrine for teaching, usually in question and answer form."},
+  {t:"Covenant",d:"A binding relationship between God and a people, with obligations on both sides. Central to how several traditions describe both baptism and salvation."},
+  {t:"Liturgy",d:"The set form of public worship. High liturgical traditions follow a fixed order; low or free traditions do not."}
+ ]]
+];
+
+const $=id=>document.getElementById(id);
+G.forEach(g=>{const o=document.createElement('option');o.value=g[0];o.textContent=g[0];$('g').appendChild(o);});
+
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+function render(){
+  const q=$('q').value.trim().toLowerCase(), grp=$('g').value;
+  let shown=0, html='';
+  G.forEach(g=>{
+    if(grp && g[0]!==grp) return;
+    const hits=g[1].filter(e=>!q || (e.t+' '+(e.alt||'')+' '+e.d).toLowerCase().includes(q));
+    if(!hits.length) return;
+    shown+=hits.length;
+    html+='<div class="group"><h2>'+g[0]+'</h2>'
+      + hits.map(e=>'<div class="entry"><h3>'+esc(e.t)+'</h3>'
+          +(e.alt?'<p class="alt">also '+esc(e.alt)+'</p>':'')
+          +'<p>'+esc(e.d)+'</p></div>').join('')
+      +'</div>';
+  });
+  $('list').innerHTML = html || '<p class="none">No term matches that search.</p>';
+  const total=G.reduce((n,g)=>n+g[1].length,0);
+  $('count').textContent = (q||grp) ? shown+' of '+total+' terms' : total+' terms';
+}
+$('q').addEventListener('input',render);
+$('g').addEventListener('change',render);
+render();
+wireLinks();
+</script>
+</body>
+</html>
+</body>
