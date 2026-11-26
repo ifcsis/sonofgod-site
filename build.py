@@ -23,7 +23,7 @@ PERSON = {
     "givenName": "Steele", "additionalName": "Harrison", "familyName": "Knudson",
     "url": SITE + "/library",
     "sameAs": [ORCID, "https://semperism.org/about.html", "https://ifcsis.org/director.html",
-               "https://semperism.substack.com", "https://superelements.com/"],
+               "https://semperism.substack.com", "https://superelements.com/", "https://peachfire.ink/"],
     "image": SITE + "/img/s-harrison-knudson.jpg",
   "knowsAbout": ["New Testament", "Gospel of Matthew", "Cleansing of the Temple",
                    "Social-scientific criticism", "Church and state", "Christian denominations"],
@@ -216,6 +216,9 @@ article.hero{padding:56px 0 10px}
 FOOTER = ('<footer>Son of God · sonofgod.love · S. Harrison Knudson, J.D. (Steele Harrison Knudson)<br>'
           f'<a href="/library" style="color:inherit">Library</a> · '
           f'<a href="https://semperism.org" style="color:inherit">Semperism</a> · '
+          f'<a href="https://ifcsis.org/director.html" style="color:inherit">IFC-SiS</a> · '
+          f'<a href="https://superelements.com/" style="color:inherit">Super Elements</a> · '
+          f'<a href="https://peachfire.ink/" style="color:inherit">Peachfire</a> · '
           f'<a href="{ORCID}" style="color:inherit">ORCID</a> · '
           f'<a href="mailto:{EMAIL}" style="color:inherit">{EMAIL}</a></footer>')
 
@@ -253,7 +256,7 @@ CSS = base_css()
 
 # 1. the four exported pages
 OLD = {
-    "home": ("/", "Christian Traditions: A Theological Spectrum",
+    "home": ("/", "Christian Traditions: A Theological Spectrum — S. Harrison Knudson",
              "Thirty Christian traditions placed along fourteen theological axes, with a glossary, an "
              "interactive chart and a self-placement survey. By S. Harrison Knudson."),
     "chart": ("/chart", "The Spectrum Chart — Christian Traditions: A Theological Spectrum",
