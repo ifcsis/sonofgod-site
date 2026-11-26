@@ -51,7 +51,10 @@ def meta(title, desc, path, og_type="website", extra=""):
             f'<meta property="og:description" content="{e(desc)}">\n'
             f'<meta property="og:url" content="{url}">\n'
             f'<meta name="author" content="S. Harrison Knudson">\n'
-            f'<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n' + extra)
+            f'<link rel="icon" href="/favicon.ico" sizes="48x48">\n'
+            f'<link rel="icon" href="/img/icon-96.png" type="image/png" sizes="96x96">\n'
+            f'<link rel="icon" href="/img/icon-192.png" type="image/png" sizes="192x192">\n'
+            f'<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n' + extra)
 
 NAV_ITEMS = [("home", "/", "Home"), ("glossary", "/glossary", "Glossary"),
              ("chart", "/chart", "View the chart"), ("survey", "/survey", "Take the survey"),
@@ -286,8 +289,12 @@ for key, (path, title, desc) in OLD.items():
     extra = ""
     if key == "home":
         extra = ld({"@context": "https://schema.org", "@graph": [
+            {"@type": "Organization", "@id": SITE + "/#org", "name": "Son of God", "url": SITE + "/",
+             "logo": {"@type": "ImageObject", "url": SITE + "/img/son-of-god-logo.png", "width": 800, "height": 183},
+             "image": SITE + "/img/icon-512.png", "founder": {"@id": PERSON["@id"]}},
             {"@type": "WebSite", "@id": SITE + "/#site", "url": SITE + "/", "name": "Son of God",
-             "alternateName": "Christian Traditions: A Theological Spectrum", "author": {"@id": PERSON["@id"]}},
+             "alternateName": "Christian Traditions: A Theological Spectrum", "author": {"@id": PERSON["@id"]},
+             "publisher": {"@id": SITE + "/#org"}},
             {"@type": "Dataset", "name": "Christian Traditions: A Theological Spectrum (version 7)",
              "description": desc, "url": SITE + "/chart", "creator": {"@id": PERSON["@id"]},
              "version": "7", "dateModified": "2026-11"},
@@ -375,9 +382,8 @@ page("/understanding", "Understanding — A Theological Spectrum",
 page("/404", "Not found — Son of God", "Page not found.", "",
      '<header class="hero prose"><h1>Not found</h1><p class="lede">That page is not here. '
      'Try the <a href="/">home page</a> or the <a href="/library">library</a>.</p></header>')
-open(os.path.join(OUT, "favicon.svg"), "w").write(
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="#2E6E60"/>'
-    '<path d="M16 6v20M9 12h14" stroke="#EFE2C4" stroke-width="3"/></svg>')
+shutil.copy("favicon-src.ico", os.path.join(OUT, "favicon.ico"))
+shutil.copy("apple-touch-icon-src.png", os.path.join(OUT, "apple-touch-icon.png"))
 open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n")
 urls = ["/", "/chart", "/survey", "/glossary", "/library", "/understanding"] + [f"/papers/{p['slug']}" for p in PAPERS]
 open(os.path.join(OUT, "sitemap.xml"), "w").write(
