@@ -24,7 +24,11 @@ PERSON = {
     "url": SITE + "/library",
     "sameAs": [ORCID, "https://semperism.org/about.html", "https://ifcsis.org/director.html",
                "https://semperism.substack.com", "https://superelements.com/", "https://peachfire.ink/"],
-    "image": SITE + "/img/s-harrison-knudson.jpg",
+    "image": {"@type": "ImageObject", "@id": SITE + "/img/s-harrison-knudson.jpg#image",
+            "url": SITE + "/img/s-harrison-knudson.jpg", "contentUrl": SITE + "/img/s-harrison-knudson.jpg",
+            "name": "Portrait of S. Harrison Knudson",
+            "caption": "S. Harrison Knudson (Steele Harrison Knudson, Steele Knudson)",
+            "about": {"@id": SITE + "/library#author"}},
   "knowsAbout": ["New Testament", "Gospel of Matthew", "Cleansing of the Temple",
                    "Social-scientific criticism", "Church and state", "Christian denominations"],
 }
@@ -311,7 +315,7 @@ lib_body = f"""<header class="hero prose">
 <section class="about">
   <h3>About the author</h3>
   <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap">
-  <img src="/img/s-harrison-knudson.jpg" alt="S. Harrison Knudson (Steele Knudson, Steele Harrison Knudson)" width="150" style="width:150px;height:auto;border:1px solid var(--rule);flex:none">
+  <img src="/img/s-harrison-knudson.jpg" alt="S. Harrison Knudson (Steele Harrison Knudson, Steele Knudson)" width="150" style="width:150px;height:auto;border:1px solid var(--rule);flex:none">
   <p style="flex:1;min-width:260px;margin:0">S. Harrison Knudson is an American lawyer and independent scholar in Arlington, Virginia. He writes on the New Testament, on the relation of church and state, and on constitutional theory. His constitutional work is collected at <a href="https://semperism.org">semperism.org</a>; he is also Director of the <a href="https://ifcsis.org">International Foundation for Child-Safe Internet Standards</a>. ORCID <a href="{ORCID}">0009-0004-3600-4115</a>.</p>
   </div>
 </section>"""
