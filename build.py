@@ -13,7 +13,7 @@ SITE = "https://sonofgod.love"
 OUT = "site"
 EMAIL = "steele@sonofgod.love"
 ORCID = "https://orcid.org/0009-0004-3600-4115"
-UPDATED = "2026-11-25"
+UPDATED = "2026-11-26"
 
 PERSON = {
     "@type": "Person", "@id": SITE + "/library#author",
@@ -24,7 +24,8 @@ PERSON = {
     "url": SITE + "/library",
     "sameAs": [ORCID, "https://semperism.org/about.html", "https://ifcsis.org/director.html",
                "https://semperism.substack.com", "https://superelements.com/"],
-    "knowsAbout": ["New Testament", "Gospel of Matthew", "Cleansing of the Temple",
+    "image": SITE + "/img/s-harrison-knudson.jpg",
+  "knowsAbout": ["New Testament", "Gospel of Matthew", "Cleansing of the Temple",
                    "Social-scientific criticism", "Church and state", "Christian denominations"],
 }
 
@@ -247,6 +248,7 @@ def req_link(p):
 # ---------------------------------------------------------------- build
 if os.path.exists(OUT): shutil.rmtree(OUT)
 os.makedirs(OUT)
+if os.path.isdir("img"): shutil.copytree("img", os.path.join(OUT, "img"))
 CSS = base_css()
 
 # 1. the four exported pages
@@ -305,7 +307,10 @@ lib_body = f"""<header class="hero prose">
 <div class="cards">{cards}</div>
 <section class="about">
   <h3>About the author</h3>
-  <p>S. Harrison Knudson is an American lawyer and independent scholar in Arlington, Virginia. He writes on the New Testament, on the relation of church and state, and on constitutional theory. His constitutional work is collected at <a href="https://semperism.org">semperism.org</a>; he is also Director of the <a href="https://ifcsis.org">International Foundation for Child-Safe Internet Standards</a>. ORCID <a href="{ORCID}">0009-0004-3600-4115</a>.</p>
+  <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap">
+  <img src="/img/s-harrison-knudson.jpg" alt="S. Harrison Knudson (Steele Knudson, Steele Harrison Knudson)" width="150" style="width:150px;height:auto;border:1px solid var(--rule);flex:none">
+  <p style="flex:1;min-width:260px;margin:0">S. Harrison Knudson is an American lawyer and independent scholar in Arlington, Virginia. He writes on the New Testament, on the relation of church and state, and on constitutional theory. His constitutional work is collected at <a href="https://semperism.org">semperism.org</a>; he is also Director of the <a href="https://ifcsis.org">International Foundation for Child-Safe Internet Standards</a>. ORCID <a href="{ORCID}">0009-0004-3600-4115</a>.</p>
+  </div>
 </section>"""
 page("/library", "Library — S. Harrison Knudson (Steele Harrison Knudson)",
      "One-page briefs of current theological and church-and-state work by S. Harrison Knudson, J.D.: "
@@ -364,7 +369,9 @@ open(os.path.join(OUT, "favicon.svg"), "w").write(
 open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n")
 urls = ["/", "/chart", "/survey", "/glossary", "/library", "/understanding"] + [f"/papers/{p['slug']}" for p in PAPERS]
 open(os.path.join(OUT, "sitemap.xml"), "w").write(
-    '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    + "".join(f"  <url><loc>{SITE}{u}</loc><lastmod>{UPDATED}</lastmod></url>\n" for u in urls) + "</urlset>\n")
+    '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n'
+    + "".join(f"  <url><loc>{SITE}{u}</loc><lastmod>{UPDATED}</lastmod>"
+              + (f"<image:image><image:loc>{SITE}/img/s-harrison-knudson.jpg</image:loc></image:image>" if u == "/library" else "")
+              + "</url>\n" for u in urls) + "</urlset>\n")
 open(os.path.join(OUT, "CNAME"), "w").write("sonofgod.love\n")
 print("built", len(urls), "pages")
