@@ -56,6 +56,18 @@ def meta(title, desc, path, og_type="website", extra=""):
             f'<link rel="icon" href="/img/icon-192.png" type="image/png" sizes="192x192">\n'
             f'<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n' + extra)
 
+
+LOGO_MARK = ('<a class="mark" href="/" target="_top"><img src="/img/son-of-god-logo.png" '
+             'alt="Son of God" width="157" height="36"></a>')
+LOGO_CSS = ('<style>.sitenav a.mark{padding:0;border:0;margin-right:auto}'
+            '.sitenav a.mark img{display:block;height:36px;width:auto}'
+            '.herologo{display:block;width:min(420px,80%);height:auto;margin:0 0 18px}</style>\n')
+def brand(doc):
+    doc = doc.replace('<span class="mark">A Theological Spectrum</span>', LOGO_MARK)
+    if LOGO_CSS not in doc:
+        doc = doc.replace('</head>', LOGO_CSS + '</head>', 1)
+    return doc
+
 NAV_ITEMS = [("home", "/", "Home"), ("glossary", "/glossary", "Glossary"),
              ("chart", "/chart", "View the chart"), ("survey", "/survey", "Take the survey"),
              ("library", "/library", "Library")]
@@ -254,7 +266,7 @@ def page(path, title, desc, here, body, og_type="website", extra_head=""):
 """
     fn = os.path.join(OUT, (path.strip("/") or "index") + ".html")
     os.makedirs(os.path.dirname(fn), exist_ok=True)
-    open(fn, "w").write(doc)
+    open(fn, "w").write(brand(doc))
 
 def req_link(p):
     subj = f"Request: {p['title']}"
@@ -268,7 +280,7 @@ CSS = base_css()
 
 # 1. the four exported pages
 OLD = {
-    "home": ("/", "Christian Traditions: A Theological Spectrum — S. Harrison Knudson",
+    "home": ("/", "Son of God — Christian Traditions: A Theological Spectrum — S. Harrison Knudson",
              "Thirty Christian traditions placed along fourteen theological axes, with a glossary, an "
              "interactive chart and a self-placement survey. By S. Harrison Knudson."),
     "chart": ("/chart", "The Spectrum Chart — Christian Traditions: A Theological Spectrum",
@@ -311,7 +323,11 @@ for key, (path, title, desc) in OLD.items():
             'keeps one-page briefs of current theological and church-and-state work by S. Harrison Knudson. '
             '<a href="/library" style="color:var(--verd)">Browse the library</a>.</p>\n</section>\n\n<section class="about">', 1)
     assert 'data-to="library"' in s, key
-    open(os.path.join(OUT, "index.html" if key == "home" else f"{key}.html"), "w").write(s)
+    if key == "home":
+        s = s.replace('<h1>Christian Traditions: A Theological Spectrum</h1>',
+                      '<img class="herologo" src="/img/son-of-god-logo.png" alt="Son of God" width="800" height="183">'
+                      '<h1>Christian Traditions: A Theological Spectrum</h1>', 1)
+    open(os.path.join(OUT, "index.html" if key == "home" else f"{key}.html"), "w").write(brand(s))
 
 # 2. library index
 cards = "".join(
