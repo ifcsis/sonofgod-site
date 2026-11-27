@@ -400,6 +400,7 @@ page("/404", "Not found — Son of God", "Page not found.", "",
      'Try the <a href="/">home page</a> or the <a href="/library">library</a>.</p></header>')
 shutil.copy("favicon-src.ico", os.path.join(OUT, "favicon.ico"))
 shutil.copy("apple-touch-icon-src.png", os.path.join(OUT, "apple-touch-icon.png"))
+shutil.copy("d0734324295647ae9605783a50b33ef3.txt", os.path.join(OUT, "d0734324295647ae9605783a50b33ef3.txt"))
 open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n")
 urls = ["/", "/chart", "/survey", "/glossary", "/library", "/understanding"] + [f"/papers/{p['slug']}" for p in PAPERS]
 open(os.path.join(OUT, "sitemap.xml"), "w").write(
