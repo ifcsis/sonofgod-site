@@ -80,45 +80,6 @@ def nav(here):
 # ---------------------------------------------------------------- papers
 PAPERS = [
     dict(
-        slug="honor-patronage-and-sacred-space",
-        title="Honor, Patronage, and Sacred Space",
-        sub="A Social-Scientific Reading of the Temple Action of Jesus (Matt 21:12–17)",
-        kind="Working paper", status="Revision in progress · 2026",
-        description="Reads Matthew’s temple scene through three social-scientific lenses — honor, "
-                    "patronage and sacred space — and asks whether the familiar picture of an angry "
-                    "outburst survives them.",
-        keywords=["Matthew 21", "Cleansing of the Temple", "honor and shame", "patronage",
-                  "sacred space", "social-scientific criticism"],
-        brief=[
-            ("The question", [
-                "The usual reading of the temple action is a reading of temperament: Jesus loses his "
-                "patience with the traders and drives them out in anger. Matthew’s scene does not "
-                "stop at the tables, though. It goes on, without a break, to the blind and the lame "
-                "being healed in the temple and to children crying “Hosanna to the Son of David” "
-                "loudly enough that the chief priests object (21:14–16).",
-                "This paper asks what the whole scene looks like when it is read with the tools "
-                "social scientists use for the ancient Mediterranean world, rather than with a "
-                "modern assumption about anger.",
-            ]),
-            ("Three lenses", [
-                "<b>Honor.</b> Public acts in a temple court were claims made before witnesses, and "
-                "claims invite challenge. Matthew records the challenge the next day: “By what "
-                "authority doest thou these things?” (21:23).",
-                "<b>Patronage.</b> The temple stood between worshippers and God, and its personnel "
-                "controlled access. In Matthew’s scene the blind and lame come to Jesus in the temple "
-                "and are healed there, with no intermediary.",
-                "<b>Sacred space.</b> The saying he quotes is about what the space is for: “My house "
-                "shall be called the house of prayer” (Isaiah 56:7). The question becomes who decides "
-                "the use of the house, and on whose authority.",
-            ]),
-            ("Why it matters", [
-                "Read together, the lenses describe a scene of authority and restored use, not of "
-                "disorder. The paper treats verses 14–17 as part of the event rather than its "
-                "aftermath, and argues that they change what the overturned tables mean.",
-            ]),
-        ],
-    ),
-    dict(
         slug="one-cleansing-or-two",
         title="One Cleansing or Two",
         sub="Why the Scholarship Shifted",
